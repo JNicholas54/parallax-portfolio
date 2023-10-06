@@ -78,7 +78,7 @@ header {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url('./images/parallax-bgimg.jpg') no-repeat;
+  background: url('./images/parallax-bgimg.jpg') no-repeat; /* will convert to parallax animation in future */
   background-position: center;
   background-attachment: fixed;
 }
