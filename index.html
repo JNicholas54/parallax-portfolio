@@ -201,5 +201,25 @@
     <script src="./js/script.js"></script>
     <!--Swiper JS-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper('.slide-content', {
+  effect: 'coverflow',
+  grabCursor: true,
+  // centeredSlides: true,
+  loop: true,
+  spaceBetween: 30,
+  slidesPerView: 3,
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+  },
+});
+    </script>
   </body>
 </html>
