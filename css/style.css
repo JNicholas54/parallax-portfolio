@@ -146,6 +146,12 @@ body {
   color: #fff;
 }
 
+.slide-container {
+  max-width: 1120px;
+  width: 100%;
+  background-color: grey;
+  padding: 40px 0;
+}
 .slide-content {
   margin: 0 40px;
 }
@@ -167,6 +173,7 @@ body {
 .image-content {
   position: relative;
   row-gap: 5px;
+  padding: 25px 0;
 }
 
 .overlay {
@@ -177,6 +184,22 @@ body {
   width: 100%;
   background-color: #ff6b6b;
   border-radius: 25px 25px 0 25px;
+}
+
+.overlay::before,
+.overlay::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: #ff6b6b;
+}
+
+.overlay::after {
+  border-radius: 0 25px 0 0;
+  background-color: #6fecec;
 }
 
 .card-image {
