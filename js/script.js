@@ -1,3 +1,4 @@
+// js for the parallax background image
 const text = document.getElementById('text');
 const bird1 = document.getElementById('bird1');
 const bird2 = document.getElementById('bird2');
@@ -18,4 +19,22 @@ window.addEventListener('scroll', () => {
   rocks.style.top = value * -0.12 + 'px';
   forest.style.top = value * 0.25 + 'px';
   header.style.top = value * 0.5 + 'px';
+});
+
+// js for smooth scrolling upon navbtn clicked
+// Select all links with hashes
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: 'smooth', // Use smooth scrolling
+      });
+    }
+  });
 });
