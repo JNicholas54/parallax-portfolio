@@ -98,7 +98,7 @@
                 <span class="overlay"></span>
 
                 <div class="card-image">
-                  <img src="#" alt="" class="card-img">
+                  <img src="./images/todo-list.png" alt="" class="card-img">
                 </div>
               </div>
 
@@ -117,7 +117,7 @@
                 <span class="overlay"></span>
 
                 <div class="card-image">
-                  <img src="#" alt="" class="card-img">
+                  <img src="./images/pokesex-img.jpeg" alt="" class="card-img">
                 </div>
               </div>
 
@@ -136,7 +136,7 @@
                 <span class="overlay"></span>
 
                 <div class="card-image">
-                  <img src="#" alt="" class="card-img">
+                  <img src="./images/api-img.png" alt="" class="card-img">
                 </div>
               </div>
 
@@ -155,7 +155,7 @@
                 <span class="overlay"></span>
 
                 <div class="card-image">
-                  <img src="#" alt="" class="card-img">
+                  <img src="./images/myflix-img.png" alt="" class="card-img">
                 </div>
               </div>
 
@@ -170,8 +170,8 @@
             </div>
         </div>
 
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
         <div class="swiper-pagination"></div>
       </div>
     </div>
@@ -180,10 +180,10 @@
     <section></section>
 
     <!-------------------- FOOTER -------------------->
-    <footer class="page-footer">
+    <footer class="footer">
       <!--try to add some flair to this paragraph in the future, maybe use a span-->
       <p>Find me on</p>
-      <div class="social_links">
+      <div class="social-links">
         <a href="https://github.com/JNicholas54" target="_blank"
           ><img class="logo" src="images/white_github_icon.png" alt="Github"
         /></a>
@@ -205,10 +205,9 @@
       var swiper = new Swiper('.slide-content', {
   effect: 'coverflow',
   grabCursor: true,
-  centerSlide: 'true',
-  loop: true,
-  spaceBetween: 25,
+  centeredSlides: true,
   slidesPerView: 3,
+  loop: true,
   fade: 'true',
   coverflowEffect: {
     rotate: 50,
@@ -219,8 +218,25 @@
   },
   pagination: {
     el: '.swiper-pagination',
-    clickable: true,
+    clickable: 'true',
     dynamicBullets: true,
+  },
+  navigation: {
+    clickable: 'true',
+    nextE1: ".swiper-button-next",
+    prevE1: ".swiper-button-prev",
+  },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    520: {
+      slidesPerView: 2,
+    },
+    950: {
+      slidesPerView: 3,
+    },
   },
 });
     </script>

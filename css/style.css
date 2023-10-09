@@ -147,20 +147,24 @@ body {
 }
 
 .slide-container {
-  max-width: 1120px;
+  max-width: fit-content;
   width: 100%;
   background-color: #094b65;
   padding: 40px 0;
 }
 .slide-content {
   margin: 0 40px;
+  background-color: #094b65;
+  overflow: hidden;
+  border-radius: 25px;
 }
 
 .card {
-  width: 320px;
-  height: 420px;
-  border-radius: 15px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border-radius: 30px;
   background-color: #6fecec;
+  padding: 15px;
 }
 
 .image-content,
@@ -229,20 +233,6 @@ body {
   font-size: 14px;
   color: #707070;
   text-align: center;
-  max-height: 100px;
-  overflow: hidden;
-}
-
-.description p {
-  margin: 0;
-}
-
-.description:after {
-  content: '...'; /* this displays an ellispsis at the end */
-}
-
-.description.collapsed {
-  max-height: none;
 }
 
 .button {
@@ -259,4 +249,88 @@ body {
 
 .button:hover {
   background: #265df2;
+}
+
+.swiper-navBtn {
+  color: #ff6b6b;
+  transition: color 0.3s ease;
+}
+
+.swiper-navBtn:hover {
+  color: #ff6b6b;
+}
+
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+  font-size: 40px;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-button-next {
+  left: 0;
+}
+
+.swiper-pagination.bullet {
+  background-color: #ff6b6b;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #265df2;
+}
+
+@media screen and (max-width: 768px) {
+  .slide-content {
+    margin: 0 10px;
+  }
+  .swiper-navBtn {
+    display: none;
+  }
+}
+
+.footer {
+  background: linear-gradient(to right, #ff6b6b, #6fecec);
+  padding: 20px 0;
+}
+
+.footer p {
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+}
+
+.social-links a {
+  margin: 0 10px;
+}
+
+.social-links .logo {
+  transition: transform 0.2s, color 0.2s;
+}
+
+.social-links .logo:hover {
+  animation: bounce 0.5s linear;
+}
+
+@keyframes bounce {
+  20% {
+    transform: translateY(-4px);
+  }
+  40% {
+    transform: translateY(0px);
+  }
+  60% {
+    transform: translateY(-2px);
+  }
+  80% {
+    transform: translateY(0px);
+  }
 }
