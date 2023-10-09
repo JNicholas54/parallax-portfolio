@@ -188,7 +188,7 @@
           ><img class="logo" src="images/white_github_icon.png" alt="Github"
         /></a>
         <!-- adjust link to your personal profile -->
-        <a href="https://linkedin.com" target="_blank"
+        <a href="https://https://www.linkedin.com/in/jeremy-nicholas-539425153/" target="_blank"
           ><img class="logo" src="images/linkedin_icon.svg" alt="Linkedin"
         /></a>
   
@@ -205,10 +205,11 @@
       var swiper = new Swiper('.slide-content', {
   effect: 'coverflow',
   grabCursor: true,
-  // centeredSlides: true,
+  centerSlide: 'true',
   loop: true,
-  spaceBetween: 30,
+  spaceBetween: 25,
   slidesPerView: 3,
+  fade: 'true',
   coverflowEffect: {
     rotate: 50,
     stretch: 0,
@@ -218,6 +219,8 @@
   },
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
+    dynamicBullets: true,
   },
 });
     </script>

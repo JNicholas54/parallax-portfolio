@@ -19,20 +19,3 @@ window.addEventListener('scroll', () => {
   forest.style.top = value * 0.25 + 'px';
   header.style.top = value * 0.5 + 'px';
 });
-
-var swiper = new Swiper('.slide-content', {
-  effect: 'coverflow',
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: 'auto',
-  coverflowEffect: {
-    rotate: 50,
-    stretch: 0,
-    depth: 100,
-    modifier: 1,
-    slideShadows: true,
-  },
-  pagination: {
-    el: '.swiper-pagination',
-  },
-});
