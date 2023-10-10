@@ -163,6 +163,7 @@ body {
   margin-top: 20px;
   margin-bottom: 30px;
   border-radius: 30px;
+  overflow: hidden;
   background-color: #6fecec;
   padding: 15px;
 }
