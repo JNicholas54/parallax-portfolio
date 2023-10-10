@@ -308,7 +308,7 @@ body {
   max-width: 400px;
   margin: 0 auto;
   border-radius: 15px;
-  background: linear-gradient(to right, #ff6b6b, #6fecec);
+  background: linear-gradient(-45deg, #6fecec 50%, #ff6b6b 50%);
 }
 
 .form-group {
