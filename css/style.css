@@ -273,7 +273,7 @@ body {
   left: 0;
 }
 
-.swiper-pagination.bullet {
+.swiper-pagination-bullet {
   background-color: #ff6b6b;
   opacity: 1;
 }
@@ -290,7 +290,50 @@ body {
     display: none;
   }
 }
+/** CONTACT SECTION */
+.contact {
+  background-color: #094b65;
+  padding: 40px;
+  text-align: center;
+}
 
+.contact h2 {
+  color: #fff;
+}
+
+/* Style the form */
+.contact-form {
+  max-width: 400px;
+  margin: 0 auto;
+  background: linear-gradient(to right, #ff6b6b, #6fecec);
+}
+
+.form-group {
+  margin: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+input[type='text'],
+input[type='email'],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/** FOOTER SECTION */
 .footer {
   background: linear-gradient(to right, #ff6b6b, #6fecec);
   padding: 20px 0;
