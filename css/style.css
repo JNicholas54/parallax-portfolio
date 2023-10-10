@@ -156,7 +156,7 @@ body {
   margin: 0 40px;
   background-color: #094b65;
   overflow: hidden;
-  border-radius: 25px;
+  border-radius: 5px;
 }
 
 .card {
@@ -299,12 +299,14 @@ body {
 
 .contact h2 {
   color: #fff;
+  text-transform: uppercase;
 }
 
 /* Style the form */
 .contact-form {
   max-width: 400px;
   margin: 0 auto;
+  border-radius: 15px;
   background: linear-gradient(to right, #ff6b6b, #6fecec);
 }
 
