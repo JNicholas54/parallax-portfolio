@@ -12,6 +12,7 @@
   </head>
 
   <body>
+    
     <header id="header">
       <a href="#" class="logo">Logo</a>
       <ul class="navigation">
@@ -36,9 +37,9 @@
 
     <!-------------------- ABOUT -------------------->
     <section id="aboutme" class="sea">
-      <h2>Jeremy Nicholas Portfolio</h2>
+      <h2>Bienvenidos! Welcome to my portfolio page!!</h2>
       <p>
-        My name is Jeremy Nicholas and I am a full-stack developer, with a background in Turfgrass Science.
+        My name is Jeremy Nicholas and I am a full-stack developer in Northern California, with a background in Turfgrass Science.
       <br /><br />
         My main expertise is with JavaScript, it's libraries and frameworks
         (particularly React), but I'm enthusiastic and active in learning and
@@ -216,9 +217,10 @@
       </div>
     </footer>
 
-    <script src="./js/script.js"></script>
+    <!-- Im using the DEFER attribute in the script tags to ensure it runs after all of teh html elements are in the body -->
+    <script defer src="./js/script.js"></script>
     <!--Swiper JS-->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script  defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script>
       var swiper = new Swiper('.slide-content', {
   effect: 'coverflow',
@@ -265,5 +267,6 @@ cardElements.forEach((card, index) => {
   });
 });
     </script>
+
   </body>
 </html>
