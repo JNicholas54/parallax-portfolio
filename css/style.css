@@ -23,14 +23,6 @@ body {
   min-height: 100vh;
 }
 
-.slide-body {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--deep-blue);
-}
-
 #header {
   position: absolute;
   top: 0;
@@ -134,6 +126,8 @@ body {
   transform: translateY(100px);
 }
 
+/**  ======================== ABOUT ME BELOW ======================== */
+
 .sea {
   position: relative;
   padding: 100px;
@@ -155,6 +149,7 @@ body {
 .skills {
   padding-top: 20px;
   background-color: var(--deep-blue);
+  position: relative;
 }
 
 .skills-header {
@@ -191,6 +186,11 @@ body {
   cursor: pointer;
 }
 
+.skill-box:hover > .skill-title:after,
+.skill-box:hover > .skill-title:before {
+  width: 35px;
+}
+
 .skill-title {
   display: flex;
   flex-direction: column;
@@ -198,6 +198,7 @@ body {
   padding: 0.5rem;
   margin-bottom: 0.5rem;
   position: relative;
+  transition: 0.5s;
 }
 
 .skill-title h3 {
@@ -221,7 +222,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 50%;
-  width: 0;
+  width: 35px;
   height: 4px;
   border-radius: 0 2px 2px 0;
   background-color: #2ecc71;
@@ -256,11 +257,38 @@ body {
 }
 
 /**  ======================== SLIDE STYLING BELOW ======================== */
+
+.projects-header {
+  text-align: center;
+  color: #fff;
+  padding: 1rem;
+  position: relative;
+}
+
+.projects-header:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 100px;
+  background-color: #ff6b6b;
+}
+
 .slide-container {
   max-width: fit-content;
   width: 100%;
   background-color: var(--deep-blue);
   padding: 40px 0;
+}
+
+.slide-body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--deep-blue);
 }
 
 .slide-content {
@@ -409,9 +437,23 @@ body {
   text-align: center;
 }
 
-.contact h2 {
+.contact-header {
+  text-align: center;
   color: #fff;
+  padding: 1rem;
+  position: relative;
   text-transform: uppercase;
+}
+
+.contact-header:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 100px;
+  background-color: #6fecec;
 }
 
 /** Style the form */
