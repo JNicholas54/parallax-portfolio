@@ -126,6 +126,11 @@ body {
   transform: translateY(100px);
 }
 
+#btn:hover {
+  background: var(--light-blue);
+  color: #000;
+}
+
 /**  ======================== ABOUT ME BELOW ======================== */
 
 .sea {
@@ -168,6 +173,7 @@ body {
   height: 4px;
   width: 100px;
   background-color: #2ecc71;
+  border-radius: 2px;
 }
 
 .skills-container {
@@ -191,6 +197,10 @@ body {
   width: 35px;
 }
 
+.skill-box:hover .skill-img {
+  transform: translateY(-10px);
+}
+
 .skill-title {
   display: flex;
   flex-direction: column;
@@ -201,20 +211,16 @@ body {
   transition: 0.5s;
 }
 
-.skill-title h3 {
-  color: #fff;
-  margin-top: 0.5rem;
-}
-
 .skill-title:after {
   content: '';
   position: absolute;
   bottom: 0;
   right: 50%;
-  width: 35px;
-  height: 4px;
+  width: 0;
+  height: 3px;
   border-radius: 2px 0 0 2px;
   background-color: #2ecc71;
+  transition: 0.5s;
 }
 
 .skill-title:before {
@@ -222,22 +228,29 @@ body {
   position: absolute;
   bottom: 0;
   left: 50%;
-  width: 35px;
-  height: 4px;
+  width: 0;
+  height: 3px;
   border-radius: 0 2px 2px 0;
   background-color: #2ecc71;
+  transition: 0.5s;
+}
+
+.skill-title h3 {
+  color: #fff;
+  margin: 0.5rem;
 }
 
 .skill-img {
   width: 90px;
   height: 90px;
   position: relative;
-  /* background-color: #fff; */
+  background-color: #094b65;
   border-radius: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 35px;
+  transition: 0.5s;
 }
 
 .skill-img:after {
@@ -247,13 +260,25 @@ body {
   left: 0;
   width: 50%;
   height: 90px;
-  /* background: rgba(100, 100, 100, 0.5); */
   border-radius: 45px 0 0 45px;
 }
 
 .skills-icon {
   width: 50px;
   z-index: 2;
+}
+
+@media screen and (max-width: 999px) {
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem 50px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 /**  ======================== SLIDE STYLING BELOW ======================== */
@@ -414,8 +439,8 @@ body {
 }
 
 .swiper-pagination-bullet {
-  background-color: var(--salmon);
-  opacity: 1;
+  color: var(--salmon);
+  opacity: 0;
 }
 
 .swiper-pagination-bullet-active {
