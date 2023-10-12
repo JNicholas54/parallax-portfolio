@@ -151,12 +151,118 @@ body {
   color: #fff;
 }
 
+/**  ======================== SKILLS BUNDLE BELOW ======================== */
+.skills {
+  padding-top: 20px;
+  background-color: var(--deep-blue);
+}
+
+.skills-header {
+  text-align: center;
+  color: #fff;
+  padding: 1rem;
+  position: relative;
+}
+
+.skills-header:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 100px;
+  background-color: #2ecc71;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  grid-gap: 1rem;
+  padding: 1rem 80px;
+  font-size: 1.2rem;
+}
+
+.skill-box {
+  padding: 1rem;
+  color: darkgoldenrod;
+  cursor: pointer;
+}
+
+.skill-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.skill-title h3 {
+  color: #fff;
+  margin-top: 0.5rem;
+}
+
+.skill-title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  width: 35px;
+  height: 4px;
+  border-radius: 2px 0 0 2px;
+  background-color: #2ecc71;
+}
+
+.skill-title:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 4px;
+  border-radius: 0 2px 2px 0;
+  background-color: #2ecc71;
+}
+
+.skill-img {
+  width: 90px;
+  height: 90px;
+  position: relative;
+  /* background-color: #fff; */
+  border-radius: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.skill-img:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 90px;
+  /* background: rgba(100, 100, 100, 0.5); */
+  border-radius: 45px 0 0 45px;
+}
+
+.skills-icon {
+  width: 50px;
+  z-index: 2;
+}
+
+/**  ======================== SLIDE STYLING BELOW ======================== */
 .slide-container {
   max-width: fit-content;
   width: 100%;
   background-color: var(--deep-blue);
   padding: 40px 0;
 }
+
 .slide-content {
   margin: 0 40px;
   background-color: var(--deep-blue);
@@ -296,7 +402,7 @@ body {
     display: none;
   }
 }
-/** CONTACT SECTION */
+/** ======================== CONTACT SECTION ======================== */
 .contact {
   background-color: var(--deep-blue);
   padding: 40px;
@@ -308,7 +414,7 @@ body {
   text-transform: uppercase;
 }
 
-/* Style the form */
+/** Style the form */
 .contact-form {
   max-width: 400px;
   margin: 0 auto;
@@ -341,7 +447,7 @@ textarea {
   resize: vertical;
 }
 
-/** FOOTER SECTION */
+/** ======================== FOOTER SECTION ======================== */
 .footer {
   background: linear-gradient(to right, var(--salmon), var(--light-blue));
   padding: 20px 0;
