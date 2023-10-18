@@ -8,6 +8,10 @@ const rocks = document.getElementById('rocks');
 const header = document.getElementById('header');
 // for scroll button
 const scrollToTopButton = document.getElementById('scrollToTopButton');
+// for contact form
+const name = document.getElementById('name').value;
+const email = document.getElementById('email').value;
+const message = document.getElementById('message').value;
 
 window.addEventListener('scroll', () => {
   let value = window.scrollY;
@@ -79,3 +83,23 @@ function scrollToTopSmoothly() {
 
   scrollToTop();
 }
+
+// JS for contact form
+document.addEventListener('DOMContentLoaded', function () {
+  var form = document.querySelector('.contact-form');
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+
+    // Collect form data
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+
+    // You can perform validation here if needed
+
+    // Display a simple alert with the form data (you can replace this with actual form submission logic)
+    var formData = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
+    alert('Form Data:\n' + formData);
+  });
+});
