@@ -29,7 +29,7 @@
       <img src="./images/bird1.png" id="bird1">
       <img src="./images/bird2.png" id="bird2">
       <img src="./images/forest.png" id="forest">
-      <a href="https://drive.google.com/file/d/1HZviVi6yonkg66205zTFbZ2se_Jm4iez/view?usp=sharing" id="btn" class="button">Downlaod my CV<a>
+      <a href="https://drive.google.com/file/d/1HZviVi6yonkg66205zTFbZ2se_Jm4iez/view?usp=sharing" id="btn" class="button">View my CV<a>
       <img src="./images/rocks.png" id="rocks">
       <img src="./images/water.png" id="water">
     </section>
@@ -320,20 +320,24 @@
     <!-------------------- CONTACT -------------------->
     <section id="contact" class="contact">
       <h2 class="contact-header">Contact Me</h2>
-      <form class="contact-form">
+      <br />
+      <h5>any field with  <span>*</span>  is required.</h5>
+      <form id="form" name="contact" method="POST" netlify class="contact-form">
           <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" placeholder="Type your name..." name="name" required>
+              <label for="name">Name *</label>
+              <input type="text" id="user" placeholder="Type your name..." name="name" required>
+              <div class="error"></div>
           </div>
           <div class="form-group">
-              <label for="email">Email</label>
+              <label for="email">Email *</label>
               <input type="email" id="email" placeholder="Enter your email..." name="email" required>
+              <div class="error"></div>
           </div>
           <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Any feedback is greatly appreciated! ✌️" rows="5" required></textarea>
+              <textarea id="message" name="message" maxlength="240" placeholder="Any feedback is greatly appreciated! ✌️" rows="5"></textarea>
           </div>
-          <a href="mailto:jernicholas@gmail.com" class="button">Click Here To Email Me</a>
+          <p><span>My Email: jernicholas54@gmail.com</span></p>
           <button type="submit" class="button">Send</button>
       </form>
   </section>

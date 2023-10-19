@@ -9,9 +9,10 @@ const header = document.getElementById('header');
 // for scroll button
 const scrollToTopButton = document.getElementById('scrollToTopButton');
 // for contact form
-const name = document.getElementById('name').value;
-const email = document.getElementById('email').value;
-const message = document.getElementById('message').value;
+const form = document.getElementById('form');
+const name = document.getElementById('user');
+const email = document.getElementById('email');
+const message = document.getElementById('message');
 
 window.addEventListener('scroll', () => {
   let value = window.scrollY;
@@ -85,21 +86,51 @@ function scrollToTopSmoothly() {
 }
 
 // JS for contact form
-document.addEventListener('DOMContentLoaded', function () {
-  var form = document.querySelector('.contact-form');
+form.addEventListener('submit', function (event) {
+  event.preventDefault(); // Prevent the default form submission behavior
 
-  form.addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent the default form submission behavior
-
-    // Collect form data
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var message = document.getElementById('message').value;
-
-    // You can perform validation here if needed
-
-    // Display a simple alert with the form data (you can replace this with actual form submission logic)
-    var formData = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
-    alert('Form Data:\n' + formData);
-  });
+  validateInputs();
 });
+
+const setError = (element, message) => {
+  const inputControl = element.parentElement;
+  const errorDisplay = inputControl.querySelector('.error');
+
+  errorDisplay.innerText = message;
+  inputControl.classList.add('error');
+  inputControl.classList.remove('success');
+};
+
+const setSuccess = (element) => {
+  const inputControl = element.parentElement;
+  const errorDisplay = inputControl.querySelector('.error');
+
+  errorDisplay.innerText = '';
+  inputControl.classList.add('success');
+  inputControl.classList.remove('error');
+};
+
+const isValidEmail = (email) => {
+  const re =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+};
+
+const validateInputs = () => {
+  const nameValue = user.value.trim();
+  const emailValue = email.value.trim();
+
+  if (nameValue === '') {
+    setError(user, 'Name is a required field.');
+  } else {
+    setSuccess(user);
+  }
+
+  if (emailValue === '') {
+    setError(email, 'Email is a required field.');
+  } else if (!isValidEmail(emailValue)) {
+    setError(email, 'Please provide a valid email address');
+  } else {
+    setSuccess(email);
+  }
+};
