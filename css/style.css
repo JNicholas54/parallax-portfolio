@@ -235,6 +235,7 @@ body {
   padding: 60px 0;
   white-space: nowrap;
   position: relative;
+  margin-bottom: 30px;
 }
 
 .skills-logos:hover .logo-slide {
@@ -287,6 +288,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #094b65;
+  margin-bottom: 75px;
 }
 
 .tech-cards {
@@ -351,6 +353,44 @@ body {
   width: 100%;
   background-color: var(--deep-blue);
   padding: 40px 0;
+}
+
+/** Skills Columns */
+#text {
+  display: flex;
+  text-align: center;
+  font-size: 18px;
+  justify-content: center;
+  color: #fff;
+  margin: 0 175px;
+}
+
+#skillset {
+  align-items: flex-start;
+}
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+#skillset .column-l {
+  flex: 1 1;
+  text-align: right;
+  color: white;
+  padding-right: 25px;
+  line-height: 2em;
+}
+
+#skillset .column-r {
+  flex: 1 1;
+  text-align: left;
+  color: white;
+  padding-left: 25px;
+  line-height: 2em;
 }
 
 .slide-body {
