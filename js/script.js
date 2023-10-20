@@ -87,8 +87,7 @@ function scrollToTopSmoothly() {
 
 // JS for contact form
 form.addEventListener('submit', function (event) {
-  event.preventDefault(); // Prevent the default form submission behavior
-
+  //event.preventDefault(); // Prevent the default form submission behavior
   validateInputs();
 });
 
