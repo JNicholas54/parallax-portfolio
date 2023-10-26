@@ -169,7 +169,7 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  max-width: 100%;
+  max-width: 1000px;
   align-items: center;
   text-align: left;
   padding: 0 20px;
@@ -190,11 +190,37 @@ body {
   margin-left: 20px;
 }
 
-#aboutme h2 {
+#welcome-header {
   font-size: 3.5em;
   margin-bottom: 20px;
   color: #fff;
   align-items: center;
+}
+
+.history {
+  padding-top: 20px;
+  background-color: var(--deep-blue);
+  position: relative;
+}
+
+.history-header {
+  text-align: center;
+  color: #fff;
+  padding: 1rem;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.history-header:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 100px;
+  background-color: #265df2;
+  border-radius: 2px;
 }
 
 .sea p {
@@ -729,4 +755,8 @@ textarea {
   80% {
     transform: translateY(0px);
   }
+}
+
+#scrollToTopButton:hover {
+  cursor: pointer;
 }

@@ -17,15 +17,18 @@ const message = document.getElementById('message');
 window.addEventListener('scroll', () => {
   let value = window.scrollY;
 
-  text.style.top = 50 + value * -0.5 + '%';
-  bird1.style.top = value * -1.5 + 'px';
-  bird1.style.left = value * 2 + 'px';
-  bird2.style.top = value * -1.5 + 'px';
-  bird2.style.left = value * -5 + 'px';
-  btn.style.marginTop = value * 1.5 + 'px';
-  rocks.style.top = value * -0.12 + 'px';
-  forest.style.top = value * 0.25 + 'px';
-  header.style.top = value * 0.5 + 'px';
+  // Adjust the factor to control the speed of the animation
+  let factor = 0.1;
+
+  text.style.top = 50 + value * -0.5 * factor + '%';
+  bird1.style.top = value * -1.5 * factor + 'px';
+  bird1.style.left = value * 2 * factor + 'px';
+  bird2.style.top = value * -1.5 * factor + 'px';
+  bird2.style.left = value * -5 * factor + 'px';
+  btn.style.marginTop = value * 1.5 * factor + 'px';
+  rocks.style.top = value * -0.12 * factor + 'px';
+  forest.style.top = value * 0.25 * factor + 'px';
+  header.style.top = value * 0.5 * factor + 'px';
 });
 
 // js for smooth scrolling upon navbtn clicked
